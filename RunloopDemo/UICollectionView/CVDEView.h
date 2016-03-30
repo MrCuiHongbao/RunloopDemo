@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  CVDEView.h
 //  RunloopDemo
 //
-//  Created by Founder on 16/1/18.
+//  Created by hongbao.cui on 16/3/9.
 //  Copyright © 2016年 Founder. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CVDEView : UICollectionReusableView
 
 @end
-

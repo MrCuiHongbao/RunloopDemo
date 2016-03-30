@@ -9,6 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+//int main(int argc, char * argv[]) {
+//    @autoreleasepool {
+//        int a = 10;
+//        int b = 20;
+//        static int sum = 0;
+//        void (^block)() = ^ {
+//            sum = a+b;
+//        };
+//        block ();
+//        return 0;
+////        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+//    }
+//}
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
