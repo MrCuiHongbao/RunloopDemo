@@ -8,6 +8,7 @@
         process_message(message);
     } while (message != quit);
 }
+
 2.与线程和线程池有关
 一般程序就是执行一个线程，是一条直线.有起点终点.而runloop就是一直在线程上面画圆圈，一直在跑圈，除非切断否则一直在运行。
 网上说的比喻很好，直线就像昙花一现一样，圆就像OS,一直运行直到你关机为止。
@@ -17,11 +18,13 @@ Runloop的寄生于线程：一个线程只能有唯一对应的runloop；但这
 一个最高优先级OB监测Entry状态；一个最低优先级OB监听BeforeWaiting状态和Exit状态。
 线程(创建)-->runloop将进入-->最高优先级OB创建释放池-->runloop将睡-->最低优先级OB销毁旧池创建新池-->runloop将退出-->
 最低优先级OB销毁新池-->线程(销毁)
+
 3.事例如Demo
 
 参考文档:http://www.cocoachina.com/ios/20150601/11970.html
          http://www.jianshu.com/p/613916eea37f
          https://developer.apple.com/library/mac/documentation/CoreFoundation/Reference/CFRunLoopRef/
+         
 排序算法（OC）
 1.冒泡排序
 /******************************
