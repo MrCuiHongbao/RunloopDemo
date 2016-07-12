@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterViewViewController">
             <connections>
+                <outlet property="textfield" destination="4E6-Bq-uB0" id="XpR-Dh-VxJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,13 +23,33 @@
                         <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="ajY-3o-2Mq"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCJ-O2-NkG">
+                    <rect key="frame" x="264" y="266" width="61" height="30"/>
+                    <state key="normal" title="测试KVO"/>
+                    <connections>
+                        <action selector="btnKVOClicked:" destination="-1" eventType="touchUpInside" id="YgI-h5-2fL"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4E6-Bq-uB0">
+                    <rect key="frame" x="252" y="351" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="cxF-qA-CBe"/>
+                        <constraint firstAttribute="width" constant="97" id="xUh-9F-DbW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="DCJ-O2-NkG" firstAttribute="top" secondItem="jfP-zD-mGw" secondAttribute="bottom" constant="46" id="7eM-B9-jfQ"/>
+                <constraint firstItem="DCJ-O2-NkG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="264" id="VT0-I0-kJ6"/>
                 <constraint firstItem="jfP-zD-mGw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="190" id="cXz-i4-8vB"/>
-                <constraint firstAttribute="bottom" secondItem="jfP-zD-mGw" secondAttribute="bottom" constant="380" id="dQ9-vF-rPe"/>
+                <constraint firstItem="4E6-Bq-uB0" firstAttribute="top" secondItem="DCJ-O2-NkG" secondAttribute="bottom" constant="55" id="eFB-Up-V40"/>
+                <constraint firstItem="4E6-Bq-uB0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="p3y-F3-kTH"/>
                 <constraint firstAttribute="trailing" secondItem="jfP-zD-mGw" secondAttribute="trailing" constant="272" id="sZW-hQ-52I"/>
                 <constraint firstItem="jfP-zD-mGw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="260" id="t3N-mq-2vX"/>
+                <constraint firstAttribute="trailing" secondItem="DCJ-O2-NkG" secondAttribute="trailing" constant="275" id="tTc-ZZ-0Le"/>
             </constraints>
         </view>
     </objects>

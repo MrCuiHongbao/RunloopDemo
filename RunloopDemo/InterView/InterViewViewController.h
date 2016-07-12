@@ -10,5 +10,7 @@
 typedef void(^testBlock)();
 @interface InterViewViewController : UIViewController
 @property(nonatomic,copy)testBlock testBlock;
+@property (nonatomic, weak) IBOutlet UITextField *textfield;
 -(IBAction)btnClicked:(id)sender;
+-(IBAction)btnKVOClicked:(id)sender;
 @end

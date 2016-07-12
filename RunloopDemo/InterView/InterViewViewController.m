@@ -7,9 +7,20 @@
 //
 
 #import "InterViewViewController.h"
+#import "NSObject+KVO.h"
+@interface Message : NSObject
 
+@property (nonatomic, copy) NSString *text;
+
+@end
+
+@implementation Message
+
+@end
 @interface InterViewViewController ()
 @property(nonatomic,strong)NSMutableArray *dataList;
+@property (nonatomic, strong) Message *message;
+@property (nonatomic)NSInteger number;
 @end
 
 @implementation InterViewViewController
@@ -24,10 +35,24 @@
     __block NSInteger i=0;//不用block会失败
     self.testBlock = ^(){
         [weakSelf.dataList addObject:@"Hong"];
-        NSLog(@"dataList:------>:%@",weakSelf.dataList);
+        NSLog(@"dataList:---1--->:%@",weakSelf.dataList);
         i=7;
-        NSLog(@"dataList:------>:%@",weakSelf.dataList);
+        NSLog(@"i:----1-->:%d",i);
+        weakSelf.number = 5;
+        NSLog(@"number:---1--->:%d",weakSelf.number);
     };
+
+    self.message = [[Message alloc] init];
+    [self.message PG_addObserver:self forKey:NSStringFromSelector(@selector(text))
+                       withBlock:^(id observedObject, NSString *observedKey, id oldValue, id newValue) {
+                           NSLog(@"%@.%@ is now: %@", observedObject, observedKey, newValue);
+                           dispatch_async(dispatch_get_main_queue(), ^{
+                               self.textfield.text = newValue;
+                           });
+                           
+                       }];
+    
+    [self btnKVOClicked:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,5 +73,12 @@
     if (self.testBlock) {
         self.testBlock();
     }
+    NSLog(@"dataList:---2--->:%@",self.dataList);
+    NSLog(@"number:---2--->:%d",self.number);
+}
+-(IBAction)btnKVOClicked:(id)sender{
+    NSArray *msgs = @[@"Hello World!", @"Objective C", @"Swift", @"Peng Gu", @"peng.gu@me.com", @"www.gupeng.me", @"glowing.com"];
+    NSUInteger index = arc4random_uniform((u_int32_t)msgs.count);
+    self.message.text = msgs[index];
 }
 @end
