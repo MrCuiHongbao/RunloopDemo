@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterViewViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfP-zD-mGw">
+                    <rect key="frame" x="260" y="190" width="68" height="30"/>
+                    <state key="normal" title="测试block"/>
+                    <connections>
+                        <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="ajY-3o-2Mq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jfP-zD-mGw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="190" id="cXz-i4-8vB"/>
+                <constraint firstAttribute="bottom" secondItem="jfP-zD-mGw" secondAttribute="bottom" constant="380" id="dQ9-vF-rPe"/>
+                <constraint firstAttribute="trailing" secondItem="jfP-zD-mGw" secondAttribute="trailing" constant="272" id="sZW-hQ-52I"/>
+                <constraint firstItem="jfP-zD-mGw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="260" id="t3N-mq-2vX"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
