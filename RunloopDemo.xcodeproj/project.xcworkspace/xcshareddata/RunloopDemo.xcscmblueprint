@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "11D780FB3A90790A2107F59078B395EE7896D701",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "11D780FB3A90790A2107F59078B395EE7896D701" : 0,
+    "8C931B42B808FE89D5331D237AD5437F6A9DA584" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1A137132-8DCC-4A89-BBF5-C466130FED65",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "11D780FB3A90790A2107F59078B395EE7896D701" : "RunloopDemo\/",
+    "8C931B42B808FE89D5331D237AD5437F6A9DA584" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RunloopDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RunloopDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MrCuiHongbao\/RunloopDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "11D780FB3A90790A2107F59078B395EE7896D701"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MrCuiHongbao\/DemoHBScrollPageView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8C931B42B808FE89D5331D237AD5437F6A9DA584"
+    }
+  ]
+}
