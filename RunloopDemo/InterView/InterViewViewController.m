@@ -53,6 +53,16 @@
                        }];
     
     [self btnKVOClicked:nil];
+    
+    NSString *strURL = [NSString stringWithFormat:@"http://www.当代教育家.com/app/homework/api/login.do?loginname=yumeng&password=yumeng"];
+    strURL = [strURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *url = [NSURL URLWithString:strURL];
+    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+    NSError *error = nil;
+    NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"error----->:%@",[error description]);
+    NSLog(@"str----->:%@",str);
 }
 
 - (void)didReceiveMemoryWarning {
