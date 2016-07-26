@@ -11,6 +11,9 @@
 #import "CVLayout.h"
 @interface CollectionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic,strong)UICollectionView *coll;
+@property(nonatomic)NSInteger hours;
+@property(nonatomic)NSInteger Mins;
+@property(nonatomic)NSInteger Seconds;
 @end
 
 @implementation CollectionViewController
@@ -27,8 +30,25 @@
     _coll.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_coll];
     [self.coll registerClass:[CVCell class] forCellWithReuseIdentifier:@"cell"];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateLabel) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
-
+-(void)updateLabel{
+    if (_Seconds==59) {
+        _Mins+=1;
+        _Seconds=0;
+    }
+    if (_Mins==59) {
+        _hours+=1;
+        _Mins = 0;
+        _Seconds = 0;
+    }
+    _Seconds++;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
+    UICollectionViewCell *cell = [_coll cellForItemAtIndexPath:indexPath];
+    UILabel *titleLabel = (UILabel *)[cell viewWithTag:100];
+    [titleLabel setText:[NSString stringWithFormat:@"%02li:%02li:%02li",(long)_hours,(long)_Mins,(long)_Seconds]];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -53,6 +73,16 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell"forIndexPath:indexPath];
+    if (indexPath.section==0&&indexPath.item==0) {
+        UILabel *titleLabel = (UILabel *) [cell viewWithTag:100];
+        if (!titleLabel) {
+            titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+            [titleLabel setText:@"00:00:00"];
+            [titleLabel setTextAlignment:NSTextAlignmentCenter];
+            titleLabel.tag = 100;
+            [cell addSubview:titleLabel];
+        }
+    }
     return cell;
 }
 @end
