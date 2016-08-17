@@ -24,6 +24,10 @@
 		6E1460F41D34EFFD00A5A1FF /* InterViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1460F21D34EFFD00A5A1FF /* InterViewViewController.m */; };
 		6E1460F51D34EFFD00A5A1FF /* InterViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1460F31D34EFFD00A5A1FF /* InterViewViewController.xib */; };
 		6E1460F71D34F34300A5A1FF /* iOS面试题汇总.md in Sources */ = {isa = PBXBuildFile; fileRef = 6E1460F61D34F34300A5A1FF /* iOS面试题汇总.md */; };
+		6E1A51B01D6458F600BAE415 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A51AC1D6458F600BAE415 /* BlockViewController.m */; };
+		6E1A51B11D6458F600BAE415 /* BlockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1A51AD1D6458F600BAE415 /* BlockViewController.xib */; };
+		6E1A51B21D6458F600BAE415 /* MRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A51AF1D6458F600BAE415 /* MRCViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6E1A51BA1D645AA700BAE415 /* HBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A51B91D645AA700BAE415 /* HBTableViewController.swift */; };
 		6E65A7C21CA283CB004B83D9 /* AboutNoteTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E65A7C11CA283CB004B83D9 /* AboutNoteTreeViewController.m */; };
 		6E65A81F1CA3C605004B83D9 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E65A81E1CA3C605004B83D9 /* SortViewController.m */; };
 		6ED204CF1C8FFAD300D5A657 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED204CE1C8FFAD300D5A657 /* CollectionViewController.m */; };
@@ -64,6 +68,13 @@
 		6E1460F21D34EFFD00A5A1FF /* InterViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterViewViewController.m; sourceTree = "<group>"; };
 		6E1460F31D34EFFD00A5A1FF /* InterViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterViewViewController.xib; sourceTree = "<group>"; };
 		6E1460F61D34F34300A5A1FF /* iOS面试题汇总.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "iOS面试题汇总.md"; sourceTree = "<group>"; };
+		6E1A51AB1D6458F600BAE415 /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		6E1A51AC1D6458F600BAE415 /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
+		6E1A51AD1D6458F600BAE415 /* BlockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlockViewController.xib; sourceTree = "<group>"; };
+		6E1A51AE1D6458F600BAE415 /* MRCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCViewController.h; sourceTree = "<group>"; };
+		6E1A51AF1D6458F600BAE415 /* MRCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCViewController.m; sourceTree = "<group>"; };
+		6E1A51B81D645AA600BAE415 /* RunloopDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunloopDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		6E1A51B91D645AA700BAE415 /* HBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HBTableViewController.swift; sourceTree = "<group>"; };
 		6E65A7C01CA283CB004B83D9 /* AboutNoteTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutNoteTreeViewController.h; sourceTree = "<group>"; };
 		6E65A7C11CA283CB004B83D9 /* AboutNoteTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutNoteTreeViewController.m; sourceTree = "<group>"; };
 		6E65A81D1CA3C605004B83D9 /* SortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
@@ -109,6 +120,7 @@
 		6E0357821C4CD749006F01EE /* RunloopDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6E1A51B31D645A2A00BAE415 /* swift */,
 				6E1460F01D34EFE600A5A1FF /* InterView */,
 				6E1460EC1D34EDBF00A5A1FF /* 自定义KVO */,
 				6ED204CB1C8FFAB600D5A657 /* UICollectionView */,
@@ -164,12 +176,26 @@
 		6E1460F01D34EFE600A5A1FF /* InterView */ = {
 			isa = PBXGroup;
 			children = (
+				6E1A51AB1D6458F600BAE415 /* BlockViewController.h */,
+				6E1A51AC1D6458F600BAE415 /* BlockViewController.m */,
+				6E1A51AD1D6458F600BAE415 /* BlockViewController.xib */,
+				6E1A51AE1D6458F600BAE415 /* MRCViewController.h */,
+				6E1A51AF1D6458F600BAE415 /* MRCViewController.m */,
 				6E1460F61D34F34300A5A1FF /* iOS面试题汇总.md */,
 				6E1460F11D34EFFD00A5A1FF /* InterViewViewController.h */,
 				6E1460F21D34EFFD00A5A1FF /* InterViewViewController.m */,
 				6E1460F31D34EFFD00A5A1FF /* InterViewViewController.xib */,
 			);
 			path = InterView;
+			sourceTree = "<group>";
+		};
+		6E1A51B31D645A2A00BAE415 /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				6E1A51B91D645AA700BAE415 /* HBTableViewController.swift */,
+				6E1A51B81D645AA600BAE415 /* RunloopDemo-Bridging-Header.h */,
+			);
+			path = swift;
 			sourceTree = "<group>";
 		};
 		6ED204CB1C8FFAB600D5A657 /* UICollectionView */ = {
@@ -221,6 +247,7 @@
 		6E0357781C4CD749006F01EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Founder;
 				TargetAttributes = {
@@ -254,6 +281,7 @@
 			files = (
 				6E0357931C4CD749006F01EE /* LaunchScreen.storyboard in Resources */,
 				6E0357901C4CD749006F01EE /* Assets.xcassets in Resources */,
+				6E1A51B11D6458F600BAE415 /* BlockViewController.xib in Resources */,
 				6ED204DD1C8FFCA400D5A657 /* bookShelf@2x.png in Resources */,
 				6E03578E1C4CD749006F01EE /* Main.storyboard in Resources */,
 				6E1460F51D34EFFD00A5A1FF /* InterViewViewController.xib in Resources */,
@@ -269,6 +297,8 @@
 			files = (
 				6E1137A51C96BA9B007F263F /* NoteTreeViewController.m in Sources */,
 				6ED204D21C8FFB7900D5A657 /* CVCell.m in Sources */,
+				6E1A51B21D6458F600BAE415 /* MRCViewController.m in Sources */,
+				6E1A51BA1D645AA700BAE415 /* HBTableViewController.swift in Sources */,
 				6ED204D81C8FFC1800D5A657 /* CVDEView.m in Sources */,
 				6E1460EF1D34EDBF00A5A1FF /* NSObject+KVO.m in Sources */,
 				6E03578B1C4CD749006F01EE /* GCDViewController.m in Sources */,
@@ -285,6 +315,7 @@
 				6E0358801C50DF1B006F01EE /* MyTestRuntime.m in Sources */,
 				6ED204CF1C8FFAD300D5A657 /* CollectionViewController.m in Sources */,
 				6E1460F71D34F34300A5A1FF /* iOS面试题汇总.md in Sources */,
+				6E1A51B01D6458F600BAE415 /* BlockViewController.m in Sources */,
 				6E03579C1C4DE66F006F01EE /* RootTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: xianghua zhou (7HE433K9S4)";
 				INFOPLIST_FILE = RunloopDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -409,6 +441,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.founder.RunloopDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunloopDemo/swift/RunloopDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -416,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: xianghua zhou (7HE433K9S4)";
 				INFOPLIST_FILE = RunloopDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -424,6 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.founder.RunloopDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunloopDemo/swift/RunloopDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};

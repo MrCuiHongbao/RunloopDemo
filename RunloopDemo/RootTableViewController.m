@@ -8,6 +8,7 @@
 
 #import "RootTableViewController.h"
 #import "GCDViewController.h"
+#import "RunloopDemo-Swift.h"
 static NSString *indentifier = @"MYCELL";
 @interface RootTableViewController ()
 @property(nonatomic,strong)NSArray *array;
@@ -24,8 +25,8 @@ static NSString *indentifier = @"MYCELL";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _array = @[@"GCD",@"RunLoopViewController",@"Runtime",@"UICollectionView",@"链表OR二叉树",@"测试InterView"];
-    _arrayVC = @[@"GCDViewController",@"RunLoopViewController",@"MessageRuntimeViewController",@"CollectionViewController",@"NoteTreeViewController",@"InterViewViewController"];
+    _array = @[@"GCD",@"RunLoopViewController",@"Runtime",@"UICollectionView",@"链表OR二叉树",@"测试InterView",@"SomeViewsViewController",@"swift",@"MRC",@"Block生命周期"];
+    _arrayVC = @[@"GCDViewController",@"RunLoopViewController",@"MessageRuntimeViewController",@"CollectionViewController",@"NoteTreeViewController",@"InterViewViewController",@"SomeViewsViewController",@"TableViewViewController",@"MRCViewController",@"BlockViewController"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:indentifier];
 }
 
@@ -91,9 +92,16 @@ static NSString *indentifier = @"MYCELL";
 */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-   NSString *classString = [_arrayVC objectAtIndex:indexPath.row];
-   UIViewController  *controllerVC = [[NSClassFromString(classString) alloc] init];
-    [self.navigationController pushViewController:controllerVC animated:YES];
+    NSString *classString = [_arrayVC objectAtIndex:indexPath.row];
+    Class class = NSClassFromString(classString);
+    if (class) {
+        UIViewController  *controllerVC = [[class alloc] init];
+        [self.navigationController pushViewController:controllerVC animated:YES];
+    }else{
+        //        let personClass:TableViewViewController? = NSClassFromString(@"RunloopDemo.TableViewViewController")
+        HBTableViewController *controllerVC = [[HBTableViewController alloc] init];
+        [self.navigationController pushViewController:controllerVC animated:YES];
+    }
 }
 /*
 #pragma mark - Navigation
