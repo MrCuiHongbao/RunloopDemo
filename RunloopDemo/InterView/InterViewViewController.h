@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+//static NSInteger HBParams=15; 限制作用域
+ NSInteger HBParams=15;
 typedef void(^testBlock)();
 @interface InterViewViewController : UIViewController
 @property(nonatomic,copy)testBlock testBlock;

@@ -18,8 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     // 将下面C函数的函数地址当做参数
-    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
-    NSUncaughtExceptionHandler *handler = NSGetUncaughtExceptionHandler();
+        NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+//        NSUncaughtExceptionHandler *handler = NSGetUncaughtExceptionHandler();
     return YES;
 }
 // 设置一个C函数，用来接收崩溃信息

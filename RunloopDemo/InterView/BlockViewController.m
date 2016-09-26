@@ -74,6 +74,12 @@ void exampleE() {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    int age = 10;
+    void (^block)() = ^{ // 值捕获
+        NSLog(@"age=%d", age);// 打印是10；
+    };
+    age = 20;
+    block();
     exampleA();
     exampleB();
     exampleC();

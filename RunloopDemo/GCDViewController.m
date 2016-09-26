@@ -7,12 +7,31 @@
 //https://github.com/ming1016/study/wiki/细说GCD（Grand-Central-Dispatch）如何用
 
 #import "GCDViewController.h"
-
+#import <objc/runtime.h>
 @interface GCDViewController ()
 
 @end
 
 @implementation GCDViewController
+#pragma mark -NSThread
+-(void)initThread{
+    NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(thread1) object:nil];
+    [thread1 start];
+    [thread1 setThreadPriority:100.0];
+    [thread1 setQualityOfService:NSQualityOfServiceUserInteractive];
+    
+    NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(thread2) object:nil];
+    [thread2 start];
+    [thread2 setThreadPriority:10.0];
+    [thread2 setQualityOfService:NSQualityOfServiceUserInitiated];
+    
+}
+-(void)thread1{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
+-(void)thread2{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
 #pragma mark- GCD
 -(void)initGCD{
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -173,11 +192,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+//    [self initThread];
 //    [self initGCD];
 //    [self dispatchApplyDemo];
-    NSArray *array = [NSArray arrayWithObjects:@"ccc", nil];
-    [array objectAtIndex:3];
-    [self dispatchIODemo];
+    @try {
+        NSArray *array = [NSArray arrayWithObjects:@"ccc", nil];
+        [array objectAtIndex:3];
+    } @catch (NSException *exception) {
+        NSLog(@"exception:%@",[exception description]);
+    } @finally {
+//        CFRunLoopRef runloop = CFRunLoopGetCurrent();
+//        NSArray *allModes = CFBridgingRelease(CFRunLoopCopyAllModes(runloop));
+//        while(1){
+//            for (NSString *mode in allModes){
+//                NSLog(@"mode-----------%@",mode);
+//                CFRunLoopInMode((__bridge CFStringRef)mode,0.001,false);
+//                CFRunLoopInMode();
+//            }
+//        }
+    }
+    
+    
+//    [self dispatchIODemo];
+    [self deadLockCase5];
 }
 //下裂几种情况可能造成思索
 - (void)deadLockCase1 {
@@ -199,7 +236,7 @@
 - (void)deadLockCase3 {
     dispatch_queue_t serialQueue = dispatch_queue_create("com.starming.gcddemo.serialqueue", DISPATCH_QUEUE_SERIAL);
     NSLog(@"1");
-    dispatch_async(serialQueue, ^{
+    dispatch_async(serialQueue, ^{//异步线程
         NSLog(@"2");
         //串行队列里面同步一个串行队列就会死锁
         dispatch_sync(serialQueue, ^{

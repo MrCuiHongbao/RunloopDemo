@@ -71,9 +71,77 @@
     NSLog(@"NSMapTable:%ld",(long)[str3 retainCount]);
     NSLog(@"map:%@",map);
     [map release];
+    extern NSInteger HBParams;
+    NSLog(@"--HBParams--:%d",HBParams);
+    
+    NSLog(@"----self.view------%ld",(long)[self.view retainCount]);
 
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    label.text = @"retailCount";
+    [label autorelease];
+    NSLog(@"----label------%ld",(long)[label retainCount]);
+
+    [self.view addSubview:label];
+    NSLog(@"----label------%ld",(long)[label retainCount]);
+    
+    NSLog(@"----self.view------%ld",(long)[self.view retainCount]);
+
+    
+//    NSAutoreleasePool *pooll= [[NSAutoreleasePool alloc] init];
+//    
+//    [pooll release];
+    
+    
+    unsigned int i = 0x123456ab;
+    unsigned char *pi = (unsigned char *)&i;
+    for (int i=0; i<sizeof(i); i++) {
+        printf("%X",*pi++);
+    }
+//    MYMARCO(self, self);
+    
+    char *j = "jdms\0";
+    printf("\n%lu,%lu",strlen(j),sizeof(j));
+    
+    NSObject *object = [[NSObject alloc] init];
+    printf(@"\n----%lu",sizeof((char *)object));
+//    swipe(1, 2);
+    
+    NSMutableArray *enumlator = [NSMutableArray arrayWithObjects:@"5",@"3",@"2",@"1",nil];
+    for (NSInteger i=0; i<enumlator.count; i++) {
+        NSString *object = [enumlator objectAtIndex:i];
+        [enumlator removeObject:object];
+    }
+    NSLog(@"enumlator----0----%@",enumlator);
+    NSMutableArray *enumlator2 = [NSMutableArray arrayWithObjects:@"5",@"3",@"2",@"1",nil];
+//    for(int i = enumlator2.count -1;i >= 0;i--){
+//        NSString *object = [enumlator2 objectAtIndex:i];
+//        [enumlator2 removeObject:object];
+//    }
+//    [enumlator2 enumerateObjectsUsingBlock:^(id obj, NSUInteger   idx, BOOL *stop) {//线程安全，但不能解决
+//        [enumlator2 removeObject:obj];
+//        NSLog(@"enumlator----n----%d",idx);
+//    }];
+    NSLog(@"enumlator----n----%@",enumlator2);
+
+    NSArray *whatYouNeedArray = [enumlator2 filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+//        return ![evaluatedObject shouldBeDeleted];
+        NSLog(@"evaluatedObject:%@",evaluatedObject);
+        NSLog(@"bindings:%@",bindings);
+        [enumlator2 removeObject:evaluatedObject];
+        return YES;
+    }]];
+    NSLog(@"whatYouNeedArray%@",enumlator2);
 }
-
+void swipe(int *p1,int *p2){
+    int nTemp=0;
+    int *p=&nTemp;
+    *p = *p1;
+    *p1 = *p2;
+    *p2 =*p;
+}
+#define  MYMARCO(_t,_m)\
+((unsigned int)(&((_t *0))->_m) -(unsigned int)(_t *)0)
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

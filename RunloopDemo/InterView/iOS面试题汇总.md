@@ -182,3 +182,73 @@
 7. 开源, 分享, 积累。 我一直认为, 分享和开源是程序员进步的不二法门。 我建议每个程序员都应该有自己的Github, 有自己的博客。就这几次面试来说, 博客和Github帮了我多。 网易面试官直言, 他们认真看过我的Github, 微信HR问我要CSDN博客ID, 说她很感兴趣。帮助别人, 也是帮助自己。
 8. 沟通。 有时候一个问题, 可能不懂, 甚至题目都不理解。不要害怕, 主动与面试官沟通。 我在网易面试的时候, 关于全拼算法的实现, 我当时连全拼都没一个完整的概念, 它要满足哪些条件更加不清楚。我跟面试官坦诚我不懂这个概念, 与他们的一步步沟通中实现了自己的算法。 所以沟通, 远比闷头写, 到头来还可能错误来的实在。
 9. 自信。 能得到面试机会, 最起码证明, 你很优秀。 我觉得自信很重要。 如果一开始, 就表现的慌慌张张, 畏首畏尾, 那么不管是你自己的发挥, 还是面试官对你的看法, 我觉得都不会很好。
+
+
+
+
+## 百度前辈的面试经
+1.@property定义的变量，默认的修饰符是什么？
+
+2.GCD同步异步操作（应用场景：a->b->c顺序执行 ，async执行的先后顺序），同步阻塞.nsoperation。
+
+3.响应链（uiimageview的user interfaced ＝ no ，uibutton添加在其上是否可以点击响应:否）。
+
+4.runloop
+
+5.runtime结构（类与对象结构，消息发送与转发，method swizzling）
+
+6.preformselect在delay 0秒时的执行顺序。
+
+7.category和extension
+
+8.tableview的cell重用机制
+
+9.xcode各种错误码意义
+
+10.懒加载方式
+
+11.mvvm，mvc模式
+
+12.设计模式，封装注意，重写init以及initwithframe建议。
+
+13。quartz2d和coregraphic
+
+14.calayer
+
+15.sdwebimage的底层实现流程。
+
+16.http与https
+
+17.ios6->ios7->ios8->ios9 \ xcode6->xcode7
+
+18.runloop的timer在滑动时的执行
+
+19.delegate相关
+
+20.arc下的dealloc有什么用
+
+21.mrc下对象=nil作用
+
+22.extern和static定义变量和方法，存储位置。
+
+23.loadview和viewdidload，应用生命周期。
+
+24.本地定时推送和远程推送（苹果的方法）
+
+25.持久化保存，及相应的应用场景
+
+26.两个app共享数据
+
+27.图片与text混编（coretext）
+
+28.定位bug，解析测试log，xcode检测内存泄漏等调试相关
+
+29.synthesize和dynamic（ios6以下）
+
+30.appdelegate都有什么方法，uiapplication delegate方法
+
+31.xib拉出来的控件为什么默认是weak；strong可不可以。
+
+32.ios沙盒保存文件，各个目录的区别。
+
+//米学网＋校内外＋新媒传信＋时光网＋乐视（不算）+猎豹

@@ -8,6 +8,7 @@
 
 #import "InterViewViewController.h"
 #import "NSObject+KVO.h"
+#import "CoreTextView.h"
 @interface Message : NSObject
 
 @property (nonatomic, copy) NSString *text;
@@ -54,15 +55,18 @@
     
     [self btnKVOClicked:nil];
     
-    NSString *strURL = [NSString stringWithFormat:@"http://www.当代教育家.com/app/homework/api/login.do?loginname=yumeng&password=yumeng"];
-    strURL = [strURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURL *url = [NSURL URLWithString:strURL];
-    NSURLRequest * request = [NSURLRequest requestWithURL:url];
-    NSError *error = nil;
-    NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"error----->:%@",[error description]);
-    NSLog(@"str----->:%@",str);
+//    NSString *strURL = [NSString stringWithFormat:@"http://www.当代教育家.com/app/homework/api/login.do?loginname=yumeng&password=yumeng"];
+//    strURL = [strURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    NSURL *url = [NSURL URLWithString:strURL];
+//    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+//    NSError *error = nil;
+//    NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
+//    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    NSLog(@"error----->:%@",[error description]);
+//    NSLog(@"str----->:%@",str);
+    
+    CoreTextView *view = [[CoreTextView alloc] initWithFrame:CGRectMake(0, 500, 768, 500)];
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

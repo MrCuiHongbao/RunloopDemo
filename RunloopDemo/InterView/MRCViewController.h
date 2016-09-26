@@ -7,7 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//class  a{
+//    public
+//    a(){
+//        NSLog(@"aa");
+//    }
+//    ~a(){
+//        NSLog(@"AA");
+//    }
+//}
+//class aa:a{
+//    public
+//    aa(){
+//        NSLog(@"AB");
+//    }
+//    ~aa(){
+//        NSLog(@"AB");
+//    }
+//}
 @interface MRCViewController : UIViewController
 
 @end
