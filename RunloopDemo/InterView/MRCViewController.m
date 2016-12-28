@@ -105,8 +105,12 @@
     
     NSObject *object = [[NSObject alloc] init];
     printf(@"\n----%lu",sizeof((char *)object));
-//    swipe(1, 2);
     
+    int m=1;
+    int n=2;
+    swipe(&m, &n);
+    printf("------------->:%d---------------->%d", m,n);
+    printf("------------->:%s", f());
     NSMutableArray *enumlator = [NSMutableArray arrayWithObjects:@"5",@"3",@"2",@"1",nil];
     for (NSInteger i=0; i<enumlator.count; i++) {
         NSString *object = [enumlator objectAtIndex:i];
@@ -132,14 +136,37 @@
         return YES;
     }]];
     NSLog(@"whatYouNeedArray%@",enumlator2);
+    char *getstring = GetWelcome();
+    printf("%s", getstring);
 }
+//不能运行通过，nTemp没有分配内存
 void swipe(int *p1,int *p2){
-    int nTemp=0;
-    int *p=&nTemp;
+    printf("\n---swipe----sizeof:%lu", sizeof(char));
+    int  *nTemp = (int *)malloc(sizeof(int));//   int nTemp=0;
+   int *p=nTemp;// int *p=&nTemp;
     *p = *p1;
     *p1 = *p2;
     *p2 =*p;
 }
+int *f() {
+    int a[3] = {1, 2, 3};
+    return a;
+}
+//如下程序用于输出“Welcome to Huawei Test”,请指出其中的两处错误:1,3
+char * GetWelcome(void){
+    char * pcWelcome;
+    char * pcNewWelcome;
+    pcWelcome="Welcome to Huawei Test";
+    pcNewWelcome=(char *)malloc(strlen(pcWelcome));    //1
+    if(NULL==pcNewWelcome){
+        return NULL;        //2
+    }
+    strcpy(pcNewWelcome, pcWelcome);    //3
+    return pcNewWelcome;            //4
+}
+
+
+
 #define  MYMARCO(_t,_m)\
 ((unsigned int)(&((_t *0))->_m) -(unsigned int)(_t *)0)
 - (void)didReceiveMemoryWarning {

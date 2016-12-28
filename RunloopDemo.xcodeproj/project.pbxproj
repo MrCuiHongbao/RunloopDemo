@@ -33,6 +33,7 @@
 		6E7978E21D90C62500D67348 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7978E11D90C62500D67348 /* CoreText.framework */; };
 		6E7978E51D90D44900D67348 /* CoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7978E41D90D44900D67348 /* CoreTextView.m */; };
 		6E7F350D1D76C65000FBB86E /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F350C1D76C65000FBB86E /* NSObjectExtension.swift */; };
+		6EA24C061DFA5C54008F565D /* CCViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EA24C051DFA5C54008F565D /* CCViewController.mm */; };
 		6ED204CF1C8FFAD300D5A657 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED204CE1C8FFAD300D5A657 /* CollectionViewController.m */; };
 		6ED204D21C8FFB7900D5A657 /* CVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED204D11C8FFB7900D5A657 /* CVCell.m */; };
 		6ED204D51C8FFB9C00D5A657 /* CVLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED204D41C8FFB9C00D5A657 /* CVLayout.m */; };
@@ -86,6 +87,8 @@
 		6E7978E31D90D44900D67348 /* CoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextView.h; sourceTree = "<group>"; };
 		6E7978E41D90D44900D67348 /* CoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextView.m; sourceTree = "<group>"; };
 		6E7F350C1D76C65000FBB86E /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		6EA24C041DFA5C54008F565D /* CCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		6EA24C051DFA5C54008F565D /* CCViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCViewController.mm; sourceTree = "<group>"; };
 		6ED204CD1C8FFAD300D5A657 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		6ED204CE1C8FFAD300D5A657 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		6ED204D01C8FFB7900D5A657 /* CVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVCell.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				6E1460F31D34EFFD00A5A1FF /* InterViewViewController.xib */,
 				6E7978E31D90D44900D67348 /* CoreTextView.h */,
 				6E7978E41D90D44900D67348 /* CoreTextView.m */,
+				6EA24C041DFA5C54008F565D /* CCViewController.h */,
+				6EA24C051DFA5C54008F565D /* CCViewController.mm */,
 			);
 			path = InterView;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				6E7978E51D90D44900D67348 /* CoreTextView.m in Sources */,
 				6ED204D21C8FFB7900D5A657 /* CVCell.m in Sources */,
 				6E1A51B21D6458F600BAE415 /* MRCViewController.m in Sources */,
+				6EA24C061DFA5C54008F565D /* CCViewController.mm in Sources */,
 				6E1A51BA1D645AA700BAE415 /* HBTableViewController.swift in Sources */,
 				6ED204D81C8FFC1800D5A657 /* CVDEView.m in Sources */,
 				6E1460EF1D34EDBF00A5A1FF /* NSObject+KVO.m in Sources */,
@@ -454,9 +460,11 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.founder.RunloopDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2bd59d42-8210-4981-b3e6-23b241009ffd";
+				PROVISIONING_PROFILE_SPECIFIER = "com.*";
 				SWIFT_OBJC_BRIDGING_HEADER = "RunloopDemo/swift/RunloopDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -472,8 +480,10 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.founder.RunloopDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2bd59d42-8210-4981-b3e6-23b241009ffd";
+				PROVISIONING_PROFILE_SPECIFIER = "com.*";
 				SWIFT_OBJC_BRIDGING_HEADER = "RunloopDemo/swift/RunloopDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
