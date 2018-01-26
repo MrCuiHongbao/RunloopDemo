@@ -25,8 +25,8 @@ static NSString *indentifier = @"MYCELL";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _array = @[@"GCD",@"RunLoopViewController",@"Runtime",@"UICollectionView",@"链表OR二叉树",@"测试InterView",@"SomeViewsViewController",@"swift",@"MRC",@"Block生命周期",@"C语言相关"];
-    _arrayVC = @[@"GCDViewController",@"RunLoopViewController",@"MessageRuntimeViewController",@"CollectionViewController",@"NoteTreeViewController",@"InterViewViewController",@"SomeViewsViewController",@"TableViewViewController",@"MRCViewController",@"BlockViewController",@"CCViewController"];
+    _array = @[@"GCD",@"RunLoopViewController",@"Runtime",@"UICollectionView",@"链表OR二叉树",@"测试InterView",@"SomeViewsViewController",@"swift",@"MRC",@"Block生命周期",@"C语言相关",@"算法类"];
+    _arrayVC = @[@"GCDViewController",@"RunLoopViewController",@"MessageRuntimeViewController",@"CollectionViewController",@"NoteTreeViewController",@"InterViewViewController",@"SomeViewsViewController",@"TableViewViewController",@"MRCViewController",@"BlockViewController",@"CCViewController",@"SFViewController"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:indentifier];
 }
 
