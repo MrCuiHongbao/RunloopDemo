@@ -62,29 +62,29 @@
 //    });
     
     //队列组
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t queue = dispatch_queue_create("com.gcd-group.www", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_group_enter(group);
-    dispatch_group_async(group, queue, ^{
-        for (int i = 0; i < 10; i++) {
-//            if (i == 9) {
-                NSLog(@"11111111");
-//            }
-        }
-        
-    });
-    dispatch_group_leave(group);
-    dispatch_group_async(group, queue, ^{
-        NSLog(@"22222222");
-    });
-    
-    dispatch_group_async(group, queue, ^{
-        NSLog(@"33333333");
-    });
-    
-    dispatch_group_notify(group, queue, ^{
-        NSLog(@"done");
-    });
+//    dispatch_group_t group = dispatch_group_create();
+//    dispatch_queue_t queue = dispatch_queue_create("com.gcd-group.www", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_group_enter(group);
+//    dispatch_group_async(group, queue, ^{
+//        for (int i = 0; i < 10; i++) {
+////            if (i == 9) {
+//                NSLog(@"11111111");
+////            }
+//        }
+//        
+//    });
+//    dispatch_group_leave(group);
+//    dispatch_group_async(group, queue, ^{
+//        NSLog(@"22222222");
+//    });
+//    
+//    dispatch_group_async(group, queue, ^{
+//        NSLog(@"33333333");
+//    });
+//    
+//    dispatch_group_notify(group, queue, ^{
+//        NSLog(@"done");
+//    });
     /*
      信号量是一个整形值并且具有一个初始计数值，并且支持两个操作：信号通知和等待。当一个信号量被信号通知，其计数会被增加。当一个线程在一个信号量上等待时，线程会被阻塞（如果有必要的话），直至计数器大于零，然后线程会减少这个计数。
      　　在GCD中有三个函数是semaphore的操作，分别是：
@@ -108,20 +108,39 @@
     
     
 //一下两种会死锁
-    dispatch_queue_t queue_s = dispatch_queue_create("myQueue", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(queue_s, ^{
-        NSLog(@"dispatch_sync---之前");//只打印 dispatch_sync---之前
-        dispatch_sync(queue_s, ^{
-            NSLog(@"死锁吗？");
-        });
-        NSLog(@"dispatch_sync---之后");
-    });
+//    dispatch_queue_t queue_s = dispatch_queue_create("myQueue", DISPATCH_QUEUE_SERIAL);
+//    dispatch_async(queue_s, ^{
+//        NSLog(@"dispatch_sync---之前");//只打印 dispatch_sync---之前
+//        dispatch_sync(queue_s, ^{
+//            NSLog(@"死锁吗？");
+//        });
+//        NSLog(@"dispatch_sync---之后");
+//    });
+//
+//    NSLog(@"dispatch_sync---死锁之前");//只打印 dispatch_sync---死锁之前
+//    dispatch_sync(dispatch_get_main_queue(), ^{
+//        NSLog(@"死锁");
+//    });
+//    NSLog(@"dispatch_sync---死锁之后");
     
-    NSLog(@"dispatch_sync---死锁之前");//只打印 dispatch_sync---死锁之前
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        NSLog(@"死锁");
+    dispatch_queue_t  queue_t = dispatch_queue_create("create-serial", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue_t, ^{
+        NSLog(@"queue_t--------->1");
+        dispatch_async(queue_t, ^{
+            NSLog(@"queue_t--------->777777777");
+        });
     });
-    NSLog(@"dispatch_sync---死锁之后");
+    dispatch_async(queue_t, ^{
+        sleep(2);
+        NSLog(@"queue_t--------->2");
+    });
+    dispatch_barrier_sync(queue_t, ^{
+        NSLog(@"666666666");
+    });
+    dispatch_async(queue_t, ^{
+        sleep(1);
+        NSLog(@"queue_t--------->3");
+    });
 }
 //dispatch_apply进行快速迭代
 //因为可以并行执行，所以使用dispatch_apply可以运行的更快
@@ -193,14 +212,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 //    [self initThread];
-//    [self initGCD];
+    [self initGCD];
 //    [self dispatchApplyDemo];
-    @try {
-        NSArray *array = [NSArray arrayWithObjects:@"ccc", nil];
-        [array objectAtIndex:3];
-    } @catch (NSException *exception) {
-        NSLog(@"exception:%@",[exception description]);
-    } @finally {
+//    @try {
+//        NSArray *array = [NSArray arrayWithObjects:@"ccc", nil];
+//        [array objectAtIndex:3];
+//    } @catch (NSException *exception) {
+//        NSLog(@"exception:%@",[exception description]);
+//    } @finally {
 //        CFRunLoopRef runloop = CFRunLoopGetCurrent();
 //        NSArray *allModes = CFBridgingRelease(CFRunLoopCopyAllModes(runloop));
 //        while(1){
@@ -210,11 +229,11 @@
 //                CFRunLoopInMode();
 //            }
 //        }
-    }
+//    }
     
     
 //    [self dispatchIODemo];
-    [self deadLockCase5];
+//    [self deadLockCase5];
 }
 //下裂几种情况可能造成思索
 - (void)deadLockCase1 {
