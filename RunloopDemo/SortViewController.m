@@ -113,8 +113,73 @@
     [self initSelectedSort:array];//选择排序
     [self initQuicklySort:array];//快速排序
     [self initDirectChaSort:[array mutableCopy]];//直接插入排序
+    [self pairSortList];//双向链表排序
 }
+typedef struct DuLNode {
+    int  data;
+    struct DuLNode *next;//*prior,
+}DuLNode, *DuLinkList;
 
+struct DuLNode *creatList(int *array,int length) {
+//    L = (DuLinkList)malloc(sizeof(DuLNode));
+//    if (L) {
+//        L->next =L;
+//    } else {
+//        exit(OVERFLOW);
+//    }
+    int count = 0;
+    DuLNode *pEnd = (DuLNode *)malloc(sizeof(DuLNode));
+    DuLNode *head = (DuLNode *)malloc(sizeof(DuLNode));
+    while (count<length) {
+        
+        DuLNode *pNew;
+        pNew = (DuLNode *)malloc(sizeof(DuLNode));
+        int data = array[count];
+        if (length == 1) {
+            head = pNew;
+            pEnd = pNew;
+        } else {
+            pNew->data = data;
+            if (count ==0) {
+                head->next = pNew;
+            }
+            pEnd->next =pNew;
+            pEnd = pNew;
+        }
+        count++;
+    }
+    return head;
+}
+void printList (DuLNode *currentNode,int length) {
+    for (int i=0; i<length; i++) {
+        printf("当前链表为：%d",currentNode->data);
+    }
+}
+//-(UIImage *) reSizeImage:(UIImage *)image toSize:(CGSize)reSize {
+//    UIGraphicsBeginImageContext(CGSizeMake(reSize.width, reSize.height));
+//    [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
+//    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    return reSizeImage;
+//}
+- (void)pairSortList {
+    int a[] = {4,5,3,6,2,8,4,23};
+    int l = sizeof(a)/4;
+    DuLNode  *node =  creatList(a,l);
+    DuLNode  *currentNode=NULL;
+    for (int i=0; i<l; i++) {
+        currentNode = node->next;
+      printf("pair list  is %d\n",currentNode->data);
+        node = currentNode;
+    }
+
+    char ch[14] = {'a','b','c','a','b','e','f','d','f','h'};
+    initlengthOfLongestSubstring(ch);
+
+}
+void initlengthOfLongestSubstring(char ch[14]) {
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

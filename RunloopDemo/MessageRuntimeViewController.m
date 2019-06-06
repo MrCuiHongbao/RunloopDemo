@@ -98,9 +98,9 @@ void dynamicMethodIMP(id self, SEL _cmd)
      //[self performSelector:@selector(method) withObject:nil];
     
     //测试 2
-    MyTestRuntime *runtime = [[MyTestRuntime alloc] init];
-    [runtime performSelector:@selector(runtimeObjectMethod) withObject:nil];
-    [runtime performSelector:@selector(title) withObject:nil];
+//    MyTestRuntime *runtime = [[MyTestRuntime alloc] init];
+//    [runtime performSelector:@selector(runtimeObjectMethod) withObject:nil];
+//    [runtime performSelector:@selector(title) withObject:nil];
 }
 
 - (void)didReceiveMemoryWarning {

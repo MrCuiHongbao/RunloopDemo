@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A23A1C4200466080061D093 /* SFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A23A1C3200466080061D093 /* SFViewController.m */; };
+		3A23A1C4200466080061D093 /* SFViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A23A1C3200466080061D093 /* SFViewController.mm */; };
+		3A731201227FDBEF0015575B /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A731200227FDBEE0015575B /* CoreML.framework */; };
+		3A731203227FDEFA0015575B /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A731202227FDEFA0015575B /* Vision.framework */; };
+		3ABAD39F22533D63007DA683 /* HBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABAD39E22533D63007DA683 /* HBView.m */; };
+		3AD5CF232248CE38009314A5 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5CF212248CE38009314A5 /* WebViewController.m */; };
+		3AD5CF262248CE5C009314A5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD5CF252248CE5C009314A5 /* WebKit.framework */; };
+		3AD5CF292248D0C2009314A5 /* HBOpenCamerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5CF282248D0C2009314A5 /* HBOpenCamerManager.m */; };
+		3AE396A5224B57E800353C87 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE396A4224B57E800353C87 /* JavaScriptCore.framework */; };
 		6E0357851C4CD749006F01EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0357841C4CD749006F01EE /* main.m */; };
 		6E0357881C4CD749006F01EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0357871C4CD749006F01EE /* AppDelegate.m */; };
 		6E03578B1C4CD749006F01EE /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E03578A1C4CD749006F01EE /* GCDViewController.m */; };
@@ -31,7 +38,6 @@
 		6E1A51BA1D645AA700BAE415 /* HBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A51B91D645AA700BAE415 /* HBTableViewController.swift */; };
 		6E65A7C21CA283CB004B83D9 /* AboutNoteTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E65A7C11CA283CB004B83D9 /* AboutNoteTreeViewController.m */; };
 		6E65A81F1CA3C605004B83D9 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E65A81E1CA3C605004B83D9 /* SortViewController.m */; };
-		6E7978E21D90C62500D67348 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7978E11D90C62500D67348 /* CoreText.framework */; };
 		6E7978E51D90D44900D67348 /* CoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7978E41D90D44900D67348 /* CoreTextView.m */; };
 		6E7F350D1D76C65000FBB86E /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F350C1D76C65000FBB86E /* NSObjectExtension.swift */; };
 		6EA24C061DFA5C54008F565D /* CCViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6EA24C051DFA5C54008F565D /* CCViewController.mm */; };
@@ -44,7 +50,17 @@
 
 /* Begin PBXFileReference section */
 		3A23A1C2200466080061D093 /* SFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFViewController.h; sourceTree = "<group>"; };
-		3A23A1C3200466080061D093 /* SFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFViewController.m; sourceTree = "<group>"; };
+		3A23A1C3200466080061D093 /* SFViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SFViewController.mm; sourceTree = "<group>"; };
+		3A731200227FDBEE0015575B /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		3A731202227FDEFA0015575B /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		3ABAD39D22533D63007DA683 /* HBView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBView.h; sourceTree = "<group>"; };
+		3ABAD39E22533D63007DA683 /* HBView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBView.m; sourceTree = "<group>"; };
+		3AD5CF212248CE38009314A5 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		3AD5CF222248CE38009314A5 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		3AD5CF252248CE5C009314A5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3AD5CF272248D0C2009314A5 /* HBOpenCamerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBOpenCamerManager.h; sourceTree = "<group>"; };
+		3AD5CF282248D0C2009314A5 /* HBOpenCamerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBOpenCamerManager.m; sourceTree = "<group>"; };
+		3AE396A4224B57E800353C87 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		6E0357801C4CD749006F01EE /* RunloopDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunloopDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0357841C4CD749006F01EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E0357861C4CD749006F01EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,8 +101,7 @@
 		6E65A7C01CA283CB004B83D9 /* AboutNoteTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutNoteTreeViewController.h; sourceTree = "<group>"; };
 		6E65A7C11CA283CB004B83D9 /* AboutNoteTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutNoteTreeViewController.m; sourceTree = "<group>"; };
 		6E65A81D1CA3C605004B83D9 /* SortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
-		6E65A81E1CA3C605004B83D9 /* SortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
-		6E7978E11D90C62500D67348 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		6E65A81E1CA3C605004B83D9 /* SortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.java; };
 		6E7978E31D90D44900D67348 /* CoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextView.h; sourceTree = "<group>"; };
 		6E7978E41D90D44900D67348 /* CoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextView.m; sourceTree = "<group>"; };
 		6E7F350C1D76C65000FBB86E /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
@@ -108,7 +123,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E7978E21D90C62500D67348 /* CoreText.framework in Frameworks */,
+				3A731203227FDEFA0015575B /* Vision.framework in Frameworks */,
+				3A731201227FDBEF0015575B /* CoreML.framework in Frameworks */,
+				3AE396A5224B57E800353C87 /* JavaScriptCore.framework in Frameworks */,
+				3AD5CF262248CE5C009314A5 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,17 +137,28 @@
 			isa = PBXGroup;
 			children = (
 				3A23A1C2200466080061D093 /* SFViewController.h */,
-				3A23A1C3200466080061D093 /* SFViewController.m */,
+				3A23A1C3200466080061D093 /* SFViewController.mm */,
 			);
 			path = "算法";
+			sourceTree = "<group>";
+		};
+		3AD5CF242248CE5C009314A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A731202227FDEFA0015575B /* Vision.framework */,
+				3A731200227FDBEE0015575B /* CoreML.framework */,
+				3AE396A4224B57E800353C87 /* JavaScriptCore.framework */,
+				3AD5CF252248CE5C009314A5 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6E0357771C4CD748006F01EE = {
 			isa = PBXGroup;
 			children = (
-				6E7978E11D90C62500D67348 /* CoreText.framework */,
 				6E0357821C4CD749006F01EE /* RunloopDemo */,
 				6E0357811C4CD749006F01EE /* Products */,
+				3AD5CF242248CE5C009314A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +173,8 @@
 		6E0357821C4CD749006F01EE /* RunloopDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3AD5CF222248CE38009314A5 /* WebViewController.h */,
+				3AD5CF212248CE38009314A5 /* WebViewController.m */,
 				3A23A1C1200465F80061D093 /* 算法 */,
 				6E1A51B31D645A2A00BAE415 /* swift */,
 				6E1460F01D34EFE600A5A1FF /* InterView */,
@@ -176,6 +207,10 @@
 				6E65A7C11CA283CB004B83D9 /* AboutNoteTreeViewController.m */,
 				6E65A81D1CA3C605004B83D9 /* SortViewController.h */,
 				6E65A81E1CA3C605004B83D9 /* SortViewController.m */,
+				3AD5CF272248D0C2009314A5 /* HBOpenCamerManager.h */,
+				3AD5CF282248D0C2009314A5 /* HBOpenCamerManager.m */,
+				3ABAD39D22533D63007DA683 /* HBView.h */,
+				3ABAD39E22533D63007DA683 /* HBView.m */,
 			);
 			path = RunloopDemo;
 			sourceTree = "<group>";
@@ -283,6 +318,7 @@
 				TargetAttributes = {
 					6E03577F1C4CD749006F01EE = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MWX7M7ABA2;
 					};
 				};
 			};
@@ -326,11 +362,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E1137A51C96BA9B007F263F /* NoteTreeViewController.m in Sources */,
+				3ABAD39F22533D63007DA683 /* HBView.m in Sources */,
 				6E7F350D1D76C65000FBB86E /* NSObjectExtension.swift in Sources */,
 				6E7978E51D90D44900D67348 /* CoreTextView.m in Sources */,
 				6ED204D21C8FFB7900D5A657 /* CVCell.m in Sources */,
 				6E1A51B21D6458F600BAE415 /* MRCViewController.m in Sources */,
 				6EA24C061DFA5C54008F565D /* CCViewController.mm in Sources */,
+				3AD5CF292248D0C2009314A5 /* HBOpenCamerManager.m in Sources */,
 				6E1A51BA1D645AA700BAE415 /* HBTableViewController.swift in Sources */,
 				6ED204D81C8FFC1800D5A657 /* CVDEView.m in Sources */,
 				6E1460EF1D34EDBF00A5A1FF /* NSObject+KVO.m in Sources */,
@@ -346,7 +384,8 @@
 				6ED204D51C8FFB9C00D5A657 /* CVLayout.m in Sources */,
 				6E1460F41D34EFFD00A5A1FF /* InterViewViewController.m in Sources */,
 				6E0358801C50DF1B006F01EE /* MyTestRuntime.m in Sources */,
-				3A23A1C4200466080061D093 /* SFViewController.m in Sources */,
+				3A23A1C4200466080061D093 /* SFViewController.mm in Sources */,
+				3AD5CF232248CE38009314A5 /* WebViewController.m in Sources */,
 				6ED204CF1C8FFAD300D5A657 /* CollectionViewController.m in Sources */,
 				6E1460F71D34F34300A5A1FF /* iOS面试题汇总.md in Sources */,
 				6E1A51B01D6458F600BAE415 /* BlockViewController.m in Sources */,
@@ -467,15 +506,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: pengbi bi (3XFW246TVB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dengyong Liu (R2NZ7LUC7B)";
+				DEVELOPMENT_TEAM = MWX7M7ABA2;
 				INFOPLIST_FILE = RunloopDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.founder.RunloopDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.founder.RunloopDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "67cb5d4f-5245-4f16-8f80-0af97020ed9d";
-				PROVISIONING_PROFILE_SPECIFIER = arvr_dev;
+				PROVISIONING_PROFILE = "8468cf2e-5122-4871-b6d9-27f66e41ddf7";
+				PROVISIONING_PROFILE_SPECIFIER = ARVR_Dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "RunloopDemo/swift/RunloopDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -487,15 +527,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: pengbi bi (3XFW246TVB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dengyong Liu (R2NZ7LUC7B)";
+				DEVELOPMENT_TEAM = MWX7M7ABA2;
 				INFOPLIST_FILE = RunloopDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.founder.RunloopDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.360buy.founder.RunloopDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "67cb5d4f-5245-4f16-8f80-0af97020ed9d";
-				PROVISIONING_PROFILE_SPECIFIER = arvr_dev;
+				PROVISIONING_PROFILE = "8468cf2e-5122-4871-b6d9-27f66e41ddf7";
+				PROVISIONING_PROFILE_SPECIFIER = ARVR_Dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "RunloopDemo/swift/RunloopDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

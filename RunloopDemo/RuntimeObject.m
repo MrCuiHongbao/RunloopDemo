@@ -9,11 +9,11 @@
 #import "RuntimeObject.h"
 
 @implementation RuntimeObject
-+(void)load{
-     NSLog(@"RuntimeObject _cmd: %@", NSStringFromSelector(_cmd));
-}
-- (void)runtimeObjectMethod
-{
-    NSLog(@"_cmd: %@", NSStringFromSelector(_cmd));
-}
+//+(void)load{
+//     NSLog(@"RuntimeObject _cmd: %@", NSStringFromSelector(_cmd));
+//}
+//- (void)runtimeObjectMethod
+//{
+//    NSLog(@"_cmd: %@", NSStringFromSelector(_cmd));
+//}
 @end
